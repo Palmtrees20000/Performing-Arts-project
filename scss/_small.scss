@@ -1,0 +1,131 @@
+/* Prevent adjustments of font size after orientation changes.  */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    height: 100%;
+  }
+  
+  
+  /*---- apply a natural box layout model to all elements -------*/
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+body {
+    height: 100%;
+    font-family: $defaultFont;
+    font-weight: $normalWeight;
+    color: grey;
+}
+
+/* --------------------------- HEADER --------------------------- */
+#headerWrapper {
+    border-bottom: 1px solid grey;
+    background-color: #ffc100;
+    color: grey;
+}
+header {
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: grey;
+    align-items: center; //vertically
+    padding: .5rem grey;
+    span {
+        font-size: 1.6rem;
+        font-weight: $lightWeight;
+        color: $primaryColor;
+    }
+}
+
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+
+#navWrapper {
+    background-color: $primaryColor;
+    flex-direction: column;
+}
+nav {
+    ul {
+        padding: 0;
+        margin: 0 $gutter;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    ul li {
+        list-style-type: none;
+        width: 100%;
+    }
+    ul li a {
+        color: $greyColor;
+        text-decoration: none;
+        display: block;
+        padding: .8rem $gutter;
+        text-align: left;
+    }
+    ul li a:hover {
+        color: $primaryColor;
+        text-decoration: underline 2px $primaryColor;
+    }
+    ul li.active a {
+        background-color: rgba(255, 255, 255, 0.8);
+        color: $primaryColor;
+        border-radius: 10px;
+    }
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  padding: 1rem;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+}
+.card img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+.card .date {
+  font-size: 0.95rem;
+  color: #c59d5f;
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+// begin the footer
+
+#footerWrapper {
+    background-color: #ffc100;
+    color: $secondaryColor;
+}
+footer {
+    padding: 0.5rem $gutter;
+    p{
+        margin: 0;
+        font-weight: 400;
+        text-align: center;
+    }
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 35rem) {
+  .parent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 64rem) {
+  .parent {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
