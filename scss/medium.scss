@@ -1,0 +1,80 @@
+@media (max-width: 34.99rem) {
+  .phone-link .phone-icon {
+    display: inline;
+  }
+  .phone-link .phone-number {
+    display: none;
+  }
+}
+@media (min-width: 35rem) {
+  .phone-link .phone-icon {
+    display: inline;
+  }
+  .phone-link .phone-number {
+    display: inline;
+  }
+}
+// Match large.scss header color
+#headerWrapper {
+  background: #f5f5f5;
+  padding: 0.75rem 0;
+}
+header {
+  padding: 2rem $gutter;
+  h1 {font-size: 2rem;}
+}
+/* NAVIGATION (medium breakpoint and up) */
+@media (min-width: 35rem) { // adjust breakpoint as needed
+  nav {
+      ul {
+          display: flex;
+          flex-direction: row; // horizontal only at/above this width
+          align-items: center;
+          gap: $gutter;
+          padding: 0;
+          margin: 0; // override earlier margin if any
+          list-style: none;
+          flex-wrap: nowrap;
+      }
+      ul li {
+          margin: 0;
+      }
+      ul li a {
+          display: block;
+          padding: .5rem .75rem; // tighter horizontal spacing for medium
+          margin: 0;
+          text-decoration: none;
+          
+      }
+      ul li a:hover {
+          text-decoration: underline 2px $primaryColor;
+      }
+      ul li.active a,
+      ul li a:hover {
+        background: #444;
+        color: #fff;
+        padding: 1rem 2rem;
+        border-radius: 16px;
+      }
+// Match large.scss navWrapper color
+#navWrapper {
+  background: #15616D;
+  width: 100%;
+  padding: unset;
+  min-height: 64px;
+}
+  }
+  .phone-link {
+    font-size: 1.5rem;
+    color: #888;
+    margin-left: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .phone-link .phone-icon {
+    display: none;
+  }
+  .phone-link .phone-number {
+    display: inline;
+  }
+}

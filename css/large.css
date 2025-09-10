@@ -1,0 +1,91 @@
+@media (max-width: 34.99rem) {
+  .phone-link .phone-icon {
+    display: inline;
+  }
+  .phone-link .phone-number {
+    display: none;
+  }
+}
+@media (min-width: 35rem) {
+  .phone-link .phone-icon {
+    display: inline;
+  }
+  .phone-link .phone-number {
+    display: inline;
+  }
+}
+main h1 {
+  font-size: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+header, nav, main {
+  max-width: 75rem;
+  margin: auto;
+}
+
+#headerWrapper {
+  background: #f5f5f5;
+  padding: 0.75rem 0;
+}
+
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  min-height: 64px;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+}
+
+.company-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #b48a3a;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.phone-link {
+  font-size: 1.5rem;
+  color: #888;
+  margin-left: auto;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.phone-link .phone-icon {
+  display: none;
+}
+
+.phone-link .phone-number {
+  display: inline;
+}
+
+#navWrapper {
+  background: #15616D;
+  width: 100%;
+  padding: unset;
+  min-height: 64px;
+}
+
+nav ul {
+  min-height: 64px;
+  align-items: center;
+}
+
+nav ul li.active a,
+nav ul li a:hover {
+  background: #444;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 16px;
+}/*# sourceMappingURL=large.css.map */

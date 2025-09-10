@@ -299,6 +299,22 @@ template {
   display: none;
 }
 
+@media (max-width: 34.99rem) {
+  .phone-link .phone-icon {
+    display: inline;
+  }
+  .phone-link .phone-number {
+    display: none;
+  }
+}
+@media (min-width: 35rem) {
+  .phone-link .phone-icon {
+    display: inline;
+  }
+  .phone-link .phone-number {
+    display: inline;
+  }
+}
 /* Prevent adjustments of font size after orientation changes.  */
 html {
   -moz-text-size-adjust: none;
@@ -324,7 +340,7 @@ body {
 /* --------------------------- HEADER --------------------------- */
 #headerWrapper {
   border-bottom: 1px solid grey;
-  background-color: #ffc100;
+  background: #f5f5f5;
   color: grey;
 }
 
@@ -338,12 +354,12 @@ header {
 header span {
   font-size: 1.6rem;
   font-weight: 300;
-  color: #1d295f;
+  color: #15616D;
 }
 
 /* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 #navWrapper {
-  background-color: #1d295f;
+  background: #15616D;
   flex-direction: column;
 }
 
@@ -366,12 +382,12 @@ nav ul li a {
   text-align: left;
 }
 nav ul li a:hover {
-  color: #1d295f;
-  text-decoration: underline 2px #1d295f;
+  color: #15616D;
+  text-decoration: underline 2px #15616D;
 }
 nav ul li.active a {
   background-color: rgba(255, 255, 255, 0.8);
-  color: #1d295f;
+  color: #15616D;
   border-radius: 10px;
 }
 
@@ -402,7 +418,7 @@ nav ul li.active a {
 }
 
 #footerWrapper {
-  background-color: #ffc100;
+  background-color: #15616D;
   color: #7c1d47;
 }
 
@@ -431,54 +447,189 @@ footer p {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-header {
-  padding: 2rem 10px;
-}
-header h1 {
-  font-size: 2rem;
+.phone-link {
+  display: block;
 }
 
-/* NAVIGATION STUFF GOES HERE  */
-nav ul {
-  display: flex;
-  justify-content: flex-start;
-  column-gap: 10px;
-}
-nav ul li a {
-  margin: 10px 0;
-}
-nav ul li a:hover {
-  text-decoration: underline 2px #1d295f;
+.phone-link .phone-icon {
+  width: 28px;
+  height: 28px;
+  vertical-align: middle;
 }
 
-header, nav, main {
-  max-width: 75rem;
-  margin: auto;
+@media (min-width: 35rem) {
+  .phone-link .phone-icon {
+    display: none;
+  }
+  .phone-link .phone-number {
+    display: inline;
+  }
 }
-
+@media (max-width: 34.99rem) {
+  .phone-link .phone-icon {
+    display: inline;
+  }
+  .phone-link .phone-number {
+    display: none;
+  }
+}
 @media only screen and (min-width: 35rem) {
+  /* NAVIGATION (medium breakpoint and up) */
+}
+@media only screen and (min-width: 35rem) and (max-width: 34.99rem) {
+  .phone-link .phone-icon {
+    display: inline;
+  }
+  .phone-link .phone-number {
+    display: none;
+  }
+}
+@media only screen and (min-width: 35rem) and (min-width: 35rem) {
+  .phone-link .phone-icon {
+    display: inline;
+  }
+  .phone-link .phone-number {
+    display: inline;
+  }
+}
+@media only screen and (min-width: 35rem) {
+  #headerWrapper {
+    background: #f5f5f5;
+    padding: 0.75rem 0;
+  }
   header {
     padding: 2rem 10px;
   }
   header h1 {
     font-size: 2rem;
   }
-  /* NAVIGATION STUFF GOES HERE  */
+}
+@media only screen and (min-width: 35rem) and (min-width: 35rem) {
   nav ul {
     display: flex;
-    justify-content: flex-start;
-    column-gap: 10px;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-wrap: nowrap;
+  }
+  nav ul li {
+    margin: 0;
   }
   nav ul li a {
-    margin: 10px 0;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin: 0;
+    text-decoration: none;
   }
   nav ul li a:hover {
-    text-decoration: underline 2px #1d295f;
+    text-decoration: underline 2px #15616D;
+  }
+  nav ul li.active a,
+  nav ul li a:hover {
+    background: #444;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 16px;
+  }
+  nav #navWrapper {
+    background: #15616D;
+    width: 100%;
+    padding: unset;
+    min-height: 64px;
+  }
+  .phone-link {
+    font-size: 1.5rem;
+    color: #888;
+    margin-left: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .phone-link .phone-icon {
+    display: none;
+  }
+  .phone-link .phone-number {
+    display: inline;
+  }
+}
+@media only screen and (min-width: 64rem) and (max-width: 34.99rem) {
+  .phone-link .phone-icon {
+    display: inline;
+  }
+  .phone-link .phone-number {
+    display: none;
+  }
+}
+@media only screen and (min-width: 64rem) and (min-width: 35rem) {
+  .phone-link .phone-icon {
+    display: inline;
+  }
+  .phone-link .phone-number {
+    display: inline;
   }
 }
 @media only screen and (min-width: 64rem) {
+  main h1 {
+    font-size: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
   header, nav, main {
     max-width: 75rem;
     margin: auto;
+  }
+  #headerWrapper {
+    background: #f5f5f5;
+    padding: 0.75rem 0;
+  }
+  .main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    min-height: 64px;
+  }
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+  }
+  .company-name {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #b48a3a;
+    margin-right: auto;
+  }
+  .phone-link {
+    font-size: 1.5rem;
+    color: #888;
+    margin-left: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .phone-link .phone-icon {
+    display: none;
+  }
+  .phone-link .phone-number {
+    display: inline;
+  }
+  #navWrapper {
+    background: #15616D;
+    width: 100%;
+    padding: unset;
+    min-height: 64px;
+  }
+  nav ul {
+    min-height: 64px;
+    align-items: center;
+  }
+  nav ul li.active a,
+  nav ul li a:hover {
+    background: #444;
+    color: #fff;
+    padding: 1rem 2rem;
+    border-radius: 16px;
   }
 }/*# sourceMappingURL=styles.css.map */
