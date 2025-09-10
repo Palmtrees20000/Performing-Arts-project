@@ -600,14 +600,17 @@ footer p {
     font-size: 2rem;
     font-weight: 700;
     color: #b48a3a;
-    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
   .phone-link {
     font-size: 1.5rem;
     color: #888;
-    margin-left: 2rem;
+    margin-left: auto;
     text-decoration: none;
     font-weight: 500;
+    display: flex;
+    align-items: center;
   }
   .phone-link .phone-icon {
     display: none;
